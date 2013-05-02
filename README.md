@@ -10,4 +10,7 @@ Add this file to your javascript directory and include it in the head tag of you
 
 	<script src="location/of/the/file/altwidthheight.js"></script>
 
-Then add your variable for the fallback alt tag text
+Then add your variable for the fallback alt tag text on line 20, replacing the text "Add your fallback javascript/asp/php variable for alt text here" with a variable of your choosing.
+	
+	// alternate alt text		
+	var var_alt = "Add your fallback javascript/asp/php variable for alt text here";
