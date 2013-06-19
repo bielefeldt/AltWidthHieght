@@ -33,14 +33,17 @@ $(document).ready(function() {
 		// check for width OR height tags
 		// if NULL or non existent set with your variable
 		if ( _width && !_height || !_width && _height ) {
-			if( _width == "" || _width == " ") {
+			if( _width == "" || _width == " " && live_width != "0") {
 				_e.attr('width', live_width+"px");
-			} else if (_height == "" || _height == " ") {
+			} else if ( _height == "" || _height == " " && live_height != "0") {
 				_e.attr('height', live_height+"px");
 			} // end if
-		} else if ( !_width && !_height) {
+		} else if ( !_width && !_height && live_width != "0") {
 			_e.attr('width', live_width+"px");
-		} // end if
+		} else if( live_width == "0" || live_height == "0") {
+			_e.attr("width", "auto");
+			_e.attr("height", "auto")
+		}// end if
 	
 	}); // end each
 
